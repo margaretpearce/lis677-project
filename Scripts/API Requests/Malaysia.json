@@ -1,0 +1,9 @@
+{
+  "country": "Malaysia",
+  "capital": "Kuala Lumpur",
+  "boundingbox": "10",
+  "locations": [
+   {"lat": 3.1243509419998037, "lng": 101.70045489718325},
+{"lat": 3.2141844000008737, "lng": 101.70045489718325}
+  ]
+}

@@ -1,0 +1,10 @@
+{ "country": "Brunei",
+  "capital": "Bandar Seri Begawan",
+  "boundingbox": "10",
+  "locations": [
+    {
+	"lat": 4.915715,
+	"lng": 114.9358993
+    }
+  ]
+}

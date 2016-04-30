@@ -1,0 +1,8 @@
+{
+  "country": "Philippines",
+  "capital": "Manila",
+  "boundingbox": "10",
+  "locations": [
+   {"lng": 121.0255219, "lat": 14.5980611}
+  ]
+}
