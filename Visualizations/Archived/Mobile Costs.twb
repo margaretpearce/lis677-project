@@ -1,0 +1,1706 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook source-platform='mac' version='9.0' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 9000.15.0527.1215                                -->
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='TableauData (Mobile Cellular Subscriptions)' inline='true' name='excel-direct.42472.869711678200' version='9.0'>
+      <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/margaretpearce/Documents/Graduate Coursework/LIS 677/Project/lis677-project/Data/Mobile Cellular Subscriptions.xls' password='' server='' validate='no'>
+        <relation name='TableauData$' table='[TableauData$]' type='table'>
+          <columns header='yes' outcome='6'>
+            <column datatype='string' name='Country Name' ordinal='0' />
+            <column datatype='string' name='Country Code' ordinal='1' />
+            <column datatype='date' name='Year' ordinal='2' />
+            <column datatype='real' name='Mobile cellular subscriptions (per 100 people)' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Country Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country Name]</local-name>
+            <parent-name>[TableauData$]</parent-name>
+            <remote-alias>Country Name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country Code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country Code]</local-name>
+            <parent-name>[TableauData$]</parent-name>
+            <remote-alias>Country Code</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[TableauData$]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mobile cellular subscriptions (per 100 people)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Mobile cellular subscriptions (per 100 people)]</local-name>
+            <parent-name>[TableauData$]</parent-name>
+            <remote-alias>Mobile cellular subscriptions (per 100 people)</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name></remote-name>
+            <remote-type>0</remote-type>
+            <parent-name>[TableauData$]</parent-name>
+            <remote-alias></remote-alias>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>1</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='string' name='[Country Code]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+      </column>
+      <column datatype='string' name='[Country Name]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='Sheet1 (Telecom Costs (Single Sheet))' inline='true' name='excel-direct.42472.868056562500' version='9.0'>
+      <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/margaretpearce/Documents/Graduate Coursework/LIS 677/Project/lis677-project/Data/Telecom Costs (Single Sheet).xlsx' password='' server='' validate='no'>
+        <relation name='&apos;Cost Data$&apos;' table='[&apos;Cost Data$&apos;]' type='table'>
+          <columns header='yes' outcome='2'>
+            <column datatype='string' name='Country' ordinal='0' />
+            <column datatype='real' name='as % GNI p.c. (Mobile cellular sub-basket, 2014)' ordinal='1' />
+            <column datatype='real' name='USD (Mobile cellular sub-basket, 2014)' ordinal='2' />
+            <column datatype='real' name='PPP$ (Mobile cellular sub-basket, 2014)' ordinal='3' />
+            <column datatype='integer' name='GNI p.c., USD (Mobile cellular sub-basket, 2014)' ordinal='4' />
+            <column datatype='real' name='as % GNI p.c. (Fixed broadband 2014)' ordinal='5' />
+            <column datatype='real' name='USD (Fixed broadband 2014)' ordinal='6' />
+            <column datatype='real' name='PPP$ (Fixed broadband 2014)' ordinal='7' />
+            <column datatype='real' name='Speed in Mbps (Fixed broadband 2014)' ordinal='8' />
+            <column datatype='string' name='Cap per month in GB (Fixed broadband 2014)' ordinal='9' />
+            <column datatype='real' name='as % GNI p.c. (Mobile broadband postpaid)' ordinal='10' />
+            <column datatype='real' name='USD (Mobile broadband postpaid)' ordinal='11' />
+            <column datatype='real' name='PPP$ (Mobile broadband postpaid)' ordinal='12' />
+            <column datatype='integer' name='Monthly data allowance (MB) (Mobile broadband postpaid)' ordinal='13' />
+            <column datatype='real' name='as % GNI p.c. (Mobile broadband prepaid)' ordinal='14' />
+            <column datatype='real' name='USD (Mobile broadband prepaid)' ordinal='15' />
+            <column datatype='real' name='PPP$ (Mobile broadband prepaid)' ordinal='16' />
+            <column datatype='integer' name='Monthly data allowance (MB) (Mobile broadband prepaid)' ordinal='17' />
+            <column datatype='real' name='as % GNI p.c. (Mobile broadband postpaid 1GB)' ordinal='18' />
+            <column datatype='real' name='USD (Mobile broadband postpaid 1GB)' ordinal='19' />
+            <column datatype='real' name='PPP$ (Mobile broadband postpaid 1GB)' ordinal='20' />
+            <column datatype='integer' name='Monthly data allowance (GB) (Mobile broadband postpaid 1GB)' ordinal='21' />
+            <column datatype='real' name='as % GNI p.c. (Mobile broadband prepaid 1GB)' ordinal='22' />
+            <column datatype='real' name='USD (Mobile broadband prepaid 1GB)' ordinal='23' />
+            <column datatype='real' name='PPP$ (Mobile broadband prepaid 1GB)' ordinal='24' />
+            <column datatype='integer' name='Monthly data allowance (GB) (Mobile broadband prepaid 1GB)' ordinal='25' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>as % GNI p.c. (Mobile cellular sub-basket, 2014)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[as % GNI p.c. (Mobile cellular sub-basket, 2014)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>as % GNI p.c. (Mobile cellular sub-basket, 2014)</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>USD (Mobile cellular sub-basket, 2014)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[USD (Mobile cellular sub-basket, 2014)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>USD (Mobile cellular sub-basket, 2014)</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PPP$ (Mobile cellular sub-basket, 2014)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PPP$ (Mobile cellular sub-basket, 2014)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>PPP$ (Mobile cellular sub-basket, 2014)</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GNI p.c., USD (Mobile cellular sub-basket, 2014)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[GNI p.c., USD (Mobile cellular sub-basket, 2014)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>GNI p.c., USD (Mobile cellular sub-basket, 2014)</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>as % GNI p.c. (Fixed broadband 2014)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[as % GNI p.c. (Fixed broadband 2014)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>as % GNI p.c. (Fixed broadband 2014)</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>USD (Fixed broadband 2014)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[USD (Fixed broadband 2014)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>USD (Fixed broadband 2014)</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PPP$ (Fixed broadband 2014)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PPP$ (Fixed broadband 2014)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>PPP$ (Fixed broadband 2014)</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Speed in Mbps (Fixed broadband 2014)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Speed in Mbps (Fixed broadband 2014)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>Speed in Mbps (Fixed broadband 2014)</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cap per month in GB (Fixed broadband 2014)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Cap per month in GB (Fixed broadband 2014)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>Cap per month in GB (Fixed broadband 2014)</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>as % GNI p.c. (Mobile broadband postpaid)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[as % GNI p.c. (Mobile broadband postpaid)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>as % GNI p.c. (Mobile broadband postpaid)</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>USD (Mobile broadband postpaid)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[USD (Mobile broadband postpaid)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>USD (Mobile broadband postpaid)</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PPP$ (Mobile broadband postpaid)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PPP$ (Mobile broadband postpaid)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>PPP$ (Mobile broadband postpaid)</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Monthly data allowance (MB) (Mobile broadband postpaid)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Monthly data allowance (MB) (Mobile broadband postpaid)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>Monthly data allowance (MB) (Mobile broadband postpaid)</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>as % GNI p.c. (Mobile broadband prepaid)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[as % GNI p.c. (Mobile broadband prepaid)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>as % GNI p.c. (Mobile broadband prepaid)</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>USD (Mobile broadband prepaid)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[USD (Mobile broadband prepaid)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>USD (Mobile broadband prepaid)</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PPP$ (Mobile broadband prepaid)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PPP$ (Mobile broadband prepaid)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>PPP$ (Mobile broadband prepaid)</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Monthly data allowance (MB) (Mobile broadband prepaid)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Monthly data allowance (MB) (Mobile broadband prepaid)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>Monthly data allowance (MB) (Mobile broadband prepaid)</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>as % GNI p.c. (Mobile broadband postpaid 1GB)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[as % GNI p.c. (Mobile broadband postpaid 1GB)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>as % GNI p.c. (Mobile broadband postpaid 1GB)</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>USD (Mobile broadband postpaid 1GB)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[USD (Mobile broadband postpaid 1GB)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>USD (Mobile broadband postpaid 1GB)</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PPP$ (Mobile broadband postpaid 1GB)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PPP$ (Mobile broadband postpaid 1GB)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>PPP$ (Mobile broadband postpaid 1GB)</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Monthly data allowance (GB) (Mobile broadband postpaid 1GB)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Monthly data allowance (GB) (Mobile broadband postpaid 1GB)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>Monthly data allowance (GB) (Mobile broadband postpaid 1GB)</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>as % GNI p.c. (Mobile broadband prepaid 1GB)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[as % GNI p.c. (Mobile broadband prepaid 1GB)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>as % GNI p.c. (Mobile broadband prepaid 1GB)</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>USD (Mobile broadband prepaid 1GB)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[USD (Mobile broadband prepaid 1GB)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>USD (Mobile broadband prepaid 1GB)</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PPP$ (Mobile broadband prepaid 1GB)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PPP$ (Mobile broadband prepaid 1GB)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>PPP$ (Mobile broadband prepaid 1GB)</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Monthly data allowance (GB) (Mobile broadband prepaid 1GB)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Monthly data allowance (GB) (Mobile broadband prepaid 1GB)]</local-name>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias>Monthly data allowance (GB) (Mobile broadband prepaid 1GB)</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name></remote-name>
+            <remote-type>0</remote-type>
+            <parent-name>[&apos;Cost Data$&apos;]</parent-name>
+            <remote-alias></remote-alias>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+      </column>
+      <column datatype='integer' name='[Monthly data allowance (MB) (Mobile broadband prepaid) (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='2' formula='[Monthly data allowance (MB) (Mobile broadband prepaid)]' peg='0' size='500' />
+      </column>
+      <column datatype='integer' name='[Monthly data allowance (MB) (Mobile broadband prepaid)]' role='measure' type='quantitative'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.458699' measure-ordering='alphabetic' measure-percentage='0.456942' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <datasource-relationships>
+    <datasource-dependencies datasource='excel-direct.42472.868056562500'>
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+      </column>
+      <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+    </datasource-dependencies>
+    <datasource-dependencies datasource='excel-direct.42472.869711678200'>
+      <column datatype='string' name='[Country Name]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+      </column>
+      <column-instance column='[Country Name]' derivation='None' name='[none:Country Name:nk]' pivot='key' type='nominal' />
+    </datasource-dependencies>
+    <datasource-relationship source='excel-direct.42472.868056562500' target='excel-direct.42472.869711678200'>
+      <column-mapping>
+        <map key='[excel-direct.42472.868056562500].[none:Country:nk]' value='[excel-direct.42472.869711678200].[none:Country Name:nk]' />
+      </column-mapping>
+    </datasource-relationship>
+  </datasource-relationships>
+  <worksheets>
+    <worksheet name='Monthly data allowance 1GB'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Telecom Costs (Single Sheet))' name='excel-direct.42472.868056562500' />
+          </datasources>
+          <datasource-dependencies datasource='excel-direct.42472.868056562500'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+            </column>
+            <column datatype='integer' name='[Monthly data allowance (GB) (Mobile broadband postpaid 1GB)]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='real' name='[as % GNI p.c. (Mobile broadband postpaid 1GB)]' role='measure' type='quantitative'>
+            </column>
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Monthly data allowance (GB) (Mobile broadband postpaid 1GB)]' derivation='Sum' name='[sum:Monthly data allowance (GB) (Mobile broadband postpaid 1GB):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[as % GNI p.c. (Mobile broadband postpaid 1GB)]' derivation='Sum' name='[sum:as % GNI p.c. (Mobile broadband postpaid 1GB):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane id='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <text column='[excel-direct.42472.868056562500].[none:Country:nk]' />
+            </encodings>
+            <trendline enable-confidence-bands='true' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' exclude-panes='false' fit='linear'>
+            </trendline>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[excel-direct.42472.868056562500].[sum:Monthly data allowance (GB) (Mobile broadband postpaid 1GB):qk]</rows>
+        <cols>[excel-direct.42472.868056562500].[sum:as % GNI p.c. (Mobile broadband postpaid 1GB):qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Postpaid mobile 1GB'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='TableauData (Mobile Cellular Subscriptions)' name='excel-direct.42472.869711678200' />
+            <datasource caption='Sheet1 (Telecom Costs (Single Sheet))' name='excel-direct.42472.868056562500' />
+          </datasources>
+          <datasource-dependencies datasource='excel-direct.42472.868056562500'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+            </column>
+            <column datatype='integer' name='[Monthly data allowance (GB) (Mobile broadband postpaid 1GB)]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='real' name='[as % GNI p.c. (Mobile broadband postpaid 1GB)]' role='measure' type='quantitative'>
+            </column>
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Monthly data allowance (GB) (Mobile broadband postpaid 1GB)]' derivation='Sum' name='[sum:Monthly data allowance (GB) (Mobile broadband postpaid 1GB):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[as % GNI p.c. (Mobile broadband postpaid 1GB)]' derivation='Sum' name='[sum:as % GNI p.c. (Mobile broadband postpaid 1GB):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='excel-direct.42472.869711678200'>
+            <column datatype='real' name='[Mobile cellular subscriptions (per 100 people)]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='date' name='[Year]' role='dimension' type='ordinal'>
+            </column>
+            <column-instance column='[Mobile cellular subscriptions (per 100 people)]' derivation='Sum' name='[sum:Mobile cellular subscriptions (per 100 people):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='Year' name='[yr:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[excel-direct.42472.869711678200].[yr:Year:ok]'>
+            <groupfilter function='member' level='[yr:Year:ok]' member='2014' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[excel-direct.42472.869711678200].[yr:Year:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[excel-direct.42472.868056562500].[sum:Monthly data allowance (GB) (Mobile broadband postpaid 1GB):qk]' num-steps='5' palette='tableau-blue' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[excel-direct.42472.868056562500].[sum:Monthly data allowance (GB) (Mobile broadband postpaid 1GB):qk]' />
+              <text column='[excel-direct.42472.868056562500].[none:Country:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[excel-direct.42472.869711678200].[sum:Mobile cellular subscriptions (per 100 people):qk]</rows>
+        <cols>[excel-direct.42472.868056562500].[sum:as % GNI p.c. (Mobile broadband postpaid 1GB):qk]</cols>
+        <join-lod-include-overrides>
+          <column>[excel-direct.42472.868056562500].[Country]</column>
+        </join-lod-include-overrides>
+      </table>
+    </worksheet>
+    <worksheet name='Postpaid mobile 500mb'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='TableauData (Mobile Cellular Subscriptions)' name='excel-direct.42472.869711678200' />
+            <datasource caption='Sheet1 (Telecom Costs (Single Sheet))' name='excel-direct.42472.868056562500' />
+          </datasources>
+          <datasource-dependencies datasource='excel-direct.42472.868056562500'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+            </column>
+            <column datatype='integer' name='[Monthly data allowance (GB) (Mobile broadband prepaid 1GB)]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='real' name='[as % GNI p.c. (Mobile broadband postpaid)]' role='measure' type='quantitative'>
+            </column>
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Monthly data allowance (GB) (Mobile broadband prepaid 1GB)]' derivation='Sum' name='[sum:Monthly data allowance (GB) (Mobile broadband prepaid 1GB):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[as % GNI p.c. (Mobile broadband postpaid)]' derivation='Sum' name='[sum:as % GNI p.c. (Mobile broadband postpaid):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='excel-direct.42472.869711678200'>
+            <column datatype='real' name='[Mobile cellular subscriptions (per 100 people)]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='date' name='[Year]' role='dimension' type='ordinal'>
+            </column>
+            <column-instance column='[Mobile cellular subscriptions (per 100 people)]' derivation='Sum' name='[sum:Mobile cellular subscriptions (per 100 people):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='Year' name='[yr:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[excel-direct.42472.869711678200].[yr:Year:ok]'>
+            <groupfilter function='member' level='[yr:Year:ok]' member='2014' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[excel-direct.42472.869711678200].[yr:Year:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[excel-direct.42472.868056562500].[sum:Monthly data allowance (GB) (Mobile broadband prepaid 1GB):qk]' num-steps='5' palette='tableau-blue' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='8'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[excel-direct.42472.868056562500].[sum:Monthly data allowance (GB) (Mobile broadband prepaid 1GB):qk]' />
+              <text column='[excel-direct.42472.868056562500].[none:Country:nk]' />
+            </encodings>
+            <trendline enable-confidence-bands='true' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' exclude-panes='false' fit='exp'>
+            </trendline>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[excel-direct.42472.869711678200].[sum:Mobile cellular subscriptions (per 100 people):qk]</rows>
+        <cols>[excel-direct.42472.868056562500].[sum:as % GNI p.c. (Mobile broadband postpaid):qk]</cols>
+        <join-lod-include-overrides>
+          <column>[excel-direct.42472.868056562500].[Country]</column>
+        </join-lod-include-overrides>
+      </table>
+    </worksheet>
+    <worksheet name='Prepaid mobile 1GB'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='TableauData (Mobile Cellular Subscriptions)' name='excel-direct.42472.869711678200' />
+            <datasource caption='Sheet1 (Telecom Costs (Single Sheet))' name='excel-direct.42472.868056562500' />
+          </datasources>
+          <datasource-dependencies datasource='excel-direct.42472.868056562500'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+            </column>
+            <column datatype='integer' name='[Monthly data allowance (GB) (Mobile broadband prepaid 1GB)]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='real' name='[as % GNI p.c. (Mobile broadband prepaid 1GB)]' role='measure' type='quantitative'>
+            </column>
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Monthly data allowance (GB) (Mobile broadband prepaid 1GB)]' derivation='Sum' name='[sum:Monthly data allowance (GB) (Mobile broadband prepaid 1GB):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[as % GNI p.c. (Mobile broadband prepaid 1GB)]' derivation='Sum' name='[sum:as % GNI p.c. (Mobile broadband prepaid 1GB):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='excel-direct.42472.869711678200'>
+            <column datatype='real' name='[Mobile cellular subscriptions (per 100 people)]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='date' name='[Year]' role='dimension' type='ordinal'>
+            </column>
+            <column-instance column='[Mobile cellular subscriptions (per 100 people)]' derivation='Sum' name='[sum:Mobile cellular subscriptions (per 100 people):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='Year' name='[yr:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[excel-direct.42472.869711678200].[yr:Year:ok]'>
+            <groupfilter function='member' level='[yr:Year:ok]' member='2014' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[excel-direct.42472.869711678200].[yr:Year:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[excel-direct.42472.868056562500].[sum:Monthly data allowance (GB) (Mobile broadband prepaid 1GB):qk]' num-steps='5' palette='tableau-blue' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[excel-direct.42472.868056562500].[sum:Monthly data allowance (GB) (Mobile broadband prepaid 1GB):qk]' />
+              <text column='[excel-direct.42472.868056562500].[none:Country:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[excel-direct.42472.869711678200].[sum:Mobile cellular subscriptions (per 100 people):qk]</rows>
+        <cols>[excel-direct.42472.868056562500].[sum:as % GNI p.c. (Mobile broadband prepaid 1GB):qk]</cols>
+        <join-lod-include-overrides>
+          <column>[excel-direct.42472.868056562500].[Country]</column>
+        </join-lod-include-overrides>
+      </table>
+    </worksheet>
+    <worksheet name='Prepaid mobile 500mb'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='TableauData (Mobile Cellular Subscriptions)' name='excel-direct.42472.869711678200' />
+            <datasource caption='Sheet1 (Telecom Costs (Single Sheet))' name='excel-direct.42472.868056562500' />
+          </datasources>
+          <datasource-dependencies datasource='excel-direct.42472.868056562500'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+            </column>
+            <column datatype='integer' name='[Monthly data allowance (GB) (Mobile broadband prepaid 1GB)]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='real' name='[as % GNI p.c. (Mobile broadband prepaid)]' role='measure' type='quantitative'>
+            </column>
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Monthly data allowance (GB) (Mobile broadband prepaid 1GB)]' derivation='Sum' name='[sum:Monthly data allowance (GB) (Mobile broadband prepaid 1GB):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[as % GNI p.c. (Mobile broadband prepaid)]' derivation='Sum' name='[sum:as % GNI p.c. (Mobile broadband prepaid):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='excel-direct.42472.869711678200'>
+            <column datatype='real' name='[Mobile cellular subscriptions (per 100 people)]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='date' name='[Year]' role='dimension' type='ordinal'>
+            </column>
+            <column-instance column='[Mobile cellular subscriptions (per 100 people)]' derivation='Sum' name='[sum:Mobile cellular subscriptions (per 100 people):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='Year' name='[yr:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[excel-direct.42472.869711678200].[yr:Year:ok]'>
+            <groupfilter function='member' level='[yr:Year:ok]' member='2014' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[excel-direct.42472.869711678200].[yr:Year:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[excel-direct.42472.868056562500].[sum:Monthly data allowance (GB) (Mobile broadband prepaid 1GB):qk]' num-steps='5' palette='tableau-blue' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='6'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[excel-direct.42472.868056562500].[sum:Monthly data allowance (GB) (Mobile broadband prepaid 1GB):qk]' />
+              <text column='[excel-direct.42472.868056562500].[none:Country:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[excel-direct.42472.869711678200].[sum:Mobile cellular subscriptions (per 100 people):qk]</rows>
+        <cols>[excel-direct.42472.868056562500].[sum:as % GNI p.c. (Mobile broadband prepaid):qk]</cols>
+        <join-lod-include-overrides>
+          <column>[excel-direct.42472.868056562500].[Country]</column>
+        </join-lod-include-overrides>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows>
+    <window class='schema' source-height='48' />
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Postpaid mobile 1GB'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='2' param='[excel-direct.42472.868056562500].[sum:Monthly data allowance (GB) (Mobile broadband postpaid 1GB):qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[excel-direct.42472.868056562500].[none:Country:nk]</field>
+          <field>[excel-direct.42472.869711678200].[yr:Year:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Prepaid mobile 1GB'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='4' param='[excel-direct.42472.868056562500].[sum:Monthly data allowance (GB) (Mobile broadband prepaid 1GB):qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[excel-direct.42472.868056562500].[none:Country:nk]</field>
+          <field>[excel-direct.42472.869711678200].[yr:Year:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Prepaid mobile 500mb'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='6' param='[excel-direct.42472.868056562500].[sum:Monthly data allowance (GB) (Mobile broadband prepaid 1GB):qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[excel-direct.42472.868056562500].[none:Country:nk]</field>
+          <field>[excel-direct.42472.869711678200].[yr:Year:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Postpaid mobile 500mb'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='8' param='[excel-direct.42472.868056562500].[sum:Monthly data allowance (GB) (Mobile broadband prepaid 1GB):qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[excel-direct.42472.868056562500].[none:Country:nk]</field>
+          <field>[excel-direct.42472.869711678200].[yr:Year:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='1' name='Monthly data allowance 1GB'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[excel-direct.42472.868056562500].[none:Country:nk]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Postpaid mobile 1GB' width='192'>
+      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
+      5rad6HseN5AAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Prepaid mobile 1GB' width='192'>
+      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
+      vJn8P2UYHkF3zVLvAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Prepaid mobile 500mb' width='192'>
+      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
+      /Kri/wGmhNjtfwjhAAAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Postpaid mobile 500mb' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Monthly data allowance 1GB' width='192'>
+      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
+      QmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>

@@ -1,5 +1,5 @@
 body {
-    padding-top: 70px;
+    padding-top: 30px;
     padding-bottom: 30px;
 }
 
@@ -15,4 +15,18 @@ body {
 
 .theme-showcase .navbar .container {
     width: auto;
+}
+
+.page-header {
+    margin: auto;
+    text-align: center;
+}
+
+.page-subtitle {
+    font-weight: lighter;
+}
+
+/* Hide Tableau bar at bottom of each viz */
+.tab-toolbar, .tab-fill {
+    display: none !important;
 }
