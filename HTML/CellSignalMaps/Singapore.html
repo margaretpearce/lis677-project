@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Singapore</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 11,
+            center: {lat: 1.3455651, lng: 103.6851594},
+            mapTypeId: google.maps.MapTypeId.TERRAIN
+        });
+
+        // Define the LatLng coordinates for the polygon's path.
+        var polygonCoords = [
+            {lat: 1.264562, lng: 103.60571789999995},
+            {lat: 1.21324711761147, lng: 103.60863563730459},
+            {lat: 1.2885026223979636, lng: 103.65953298251952},
+            {lat: 1.2993574031434074, lng: 103.7303002586425},
+            {lat: 1.2629421025489604, lng: 103.76824812015388},
+            {lat: 1.2333911647237499, lng: 103.83366180197754},
+            {lat: 1.2937368996758036, lng: 103.90269106992184},
+            {lat: 1.3138159501648632, lng: 103.96500364365238},
+            {lat: 1.3133009704634295, lng: 104.03212273593749},
+            {lat: 1.3533731697206661, lng: 104.0425941753906},
+            {lat: 1.3920718215607195, lng: 104.00088055624997},
+            {lat: 1.406315710408119, lng: 103.93530610117182},
+            {lat: 1.48148, lng: 103.80278390000001},
+            {lat: 1.4497329788524147, lng: 103.76716432187504},
+            {lat: 1.461916946474581, lng: 103.72605157968758},
+            {lat: 1.4299979859593446, lng: 103.67541178867191},
+            {lat: 1.3486543082678846, lng: 103.63507168027343},
+            {lat: 1.264562, lng: 103.60571789999995}
+        ];
+
+        var boundingBoxes = [
+            {north: 1.3479973046130749, south: 1.2581638466120049, east: 103.74049830278074, west: 103.65064470092688},
+            {north: 1.4378307626141447, south: 1.3479973046130747, east: 103.74049830278074, west: 103.65064470092688},
+            {north: 1.3479973046130749, south: 1.2581638466120049, east: 103.8303519046346, west: 103.74049830278074},
+            {north: 1.4378307626141447, south: 1.3479973046130747, east: 103.8303519046346, west: 103.74049830278074},
+            {north: 1.3479973046130749, south: 1.2581638466120049, east: 103.92020550648846, west: 103.8303519046346},
+            {north: 1.4378307626141447, south: 1.3479973046130747, east: 103.92020550648846, west: 103.8303519046346},
+            {north: 1.4378307626141447, south: 1.3479973046130747, east: 104.01005910834232, west: 103.92020550648846}
+        ];
+
+        var cityCoords = [
+            {lng: 104.12611109999999, lat: 1.28925},{lng: 104.12517559999999, lat: 1.2758195999999997},{lng: 104.11490400000001, lat: 1.2765354},{lng: 104.0927257, lat: 1.2733869},{lng: 104.0333333, lat: 1.2694999999999999},{lng: 103.9184908, lat: 1.2226474},{lng: 103.88074999999999, lat: 1.20725},{lng: 103.85983329999999, lat: 1.1959722},{lng: 103.80499999999999, lat: 1.1714444},{lng: 103.74069440000002, lat: 1.1303611},{lng: 103.67072219999999, lat: 1.1794444},{lng: 103.66069440000001, lat: 1.1881667},{lng: 103.57233329999998, lat: 1.1987500000000002},{lng: 103.56666670000001, lat: 1.1955},{lng: 103.60286109999998, lat: 1.2641666999999999},{lng: 103.61616670000001, lat: 1.3143056},{lng: 103.6170833, lat: 1.3154166999999999},{lng: 103.6178333, lat: 1.3216111},{lng: 103.6300556, lat: 1.3410556},{lng: 103.6355556, lat: 1.3520278000000001},{lng: 103.6376389, lat: 1.3573889000000001},{lng: 103.6408889, lat: 1.3629722},{lng: 103.64919440000001, lat: 1.3799166999999999},{lng: 103.65297219999998, lat: 1.3870833},{lng: 103.6535, lat: 1.3912778000000001},{lng: 103.6571667, lat: 1.4004166999999998},{lng: 103.6639167, lat: 1.4104721999999998},{lng: 103.6694444, lat: 1.4157499999999998},{lng: 103.67388889999998, lat: 1.4281389},{lng: 103.68333329999999, lat: 1.43725},{lng: 103.69405560000001, lat: 1.4398889},{lng: 103.69886109999999, lat: 1.4433055999999997},{lng: 103.70375, lat: 1.4507778},{lng: 103.71411110000001, lat: 1.4574721999999998},{lng: 103.72833329999999, lat: 1.4601389},{lng: 103.73980560000001, lat: 1.4546111},{lng: 103.74677779999999, lat: 1.4503889},{lng: 103.76069440000002, lat: 1.4483889},{lng: 103.7710278, lat: 1.4527221999999997},{lng: 103.7711111, lat: 1.4527778},{lng: 103.7904722, lat: 1.4651389},{lng: 103.80366670000001, lat: 1.4765},{lng: 103.81266670000001, lat: 1.4784722},{lng: 103.8221667, lat: 1.4766943999999997},{lng: 103.83416670000001, lat: 1.4729999999999999},{lng: 103.85199999999999, lat: 1.4661666999999998},{lng: 103.8586667, lat: 1.4629443999999998},{lng: 103.8649722, lat: 1.4588610999999998},{lng: 103.8681667, lat: 1.4565278},{lng: 103.87502779999998, lat: 1.4489721999999998},{lng: 103.8778899, lat: 1.4454087999999998},{lng: 103.88613889999999, lat: 1.4351388999999999},{lng: 103.8978611, lat: 1.4279443999999997},{lng: 103.9021275, lat: 1.4278249999999997},{lng: 103.91275, lat: 1.4275277999999998},{lng: 103.91683330000001, lat: 1.4266666999999997},{lng: 103.9200435, lat: 1.4274485999999997},{lng: 103.9233333, lat: 1.42825},{lng: 103.93341670000001, lat: 1.4304166999999999},{lng: 103.93769440000003, lat: 1.4304721999999999},{lng: 103.94252780000001, lat: 1.4278332999999996},{lng: 103.9525278, lat: 1.4253610999999997},{lng: 103.95755560000002, lat: 1.4244166999999999},{lng: 103.96066670000002, lat: 1.42475},{lng: 103.96680560000001, lat: 1.4221666999999998},{lng: 103.9724167, lat: 1.4219443999999997},{lng: 103.9799167, lat: 1.4244166999999999},{lng: 103.9835833, lat: 1.4242778},{lng: 103.98616670000001, lat: 1.4249166999999998},{lng: 103.9890278, lat: 1.4247778},{lng: 103.99291670000001, lat: 1.4249999999999998},{lng: 103.99525000000001, lat: 1.4236943999999996},{lng: 104.00286109999999, lat: 1.4206111},{lng: 104.0233056, lat: 1.4391388999999999},{lng: 104.0408333, lat: 1.4438889},{lng: 104.05747219999999, lat: 1.4398610999999997},{lng: 104.07119440000001, lat: 1.4346389},{lng: 104.07647219999998, lat: 1.4309166999999998},{lng: 104.08847219999998, lat: 1.4175832999999998},{lng: 104.0896111, lat: 1.4154999999999998},{lng: 104.09075, lat: 1.4124443999999998},{lng: 104.09266670000001, lat: 1.4059443999999996},{lng: 104.0930278, lat: 1.3998055999999999},{lng: 104.09247219999999, lat: 1.3942500000000002},{lng: 104.08955560000001, lat: 1.3846943999999999},{lng: 104.0835833, lat: 1.3687500000000001},{lng: 104.07972219999999, lat: 1.3575},{lng: 104.08527779999999, lat: 1.3466666999999999},{lng: 104.12611109999999, lat: 1.28925}
+        ];
+
+        // Draw the polygon version of the city
+        var cityPolygon = new google.maps.Polygon({
+            paths: polygonCoords,
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.5,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.2,
+            editable: true,
+            draggable: true,
+        });
+        cityPolygon.setMap(map);
+
+        // Draw bounding boxes surrounding each marker
+        for(i = 0; i < boundingBoxes.length; i++) {
+            var rectangle = new google.maps.Rectangle({
+                strokeColor: '#ffffff',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FFff00',
+                fillOpacity: 0.4,
+                map: map,
+                bounds: boundingBoxes[i]
+            });
+        }
+
+        // Draw the city behind the polygon
+        var cityBoundary = new google.maps.Polygon({
+            paths: cityCoords,
+            fillColor: '#ADD8E6',
+            strokeOpacity: 0.8,
+            strokeColor: '#0000FF',
+            strokeWeight: 2,
+            fillOpacity: 0.1,
+        });
+        cityBoundary.setMap(map);
+
+        // Respond to polygon click events
+        infoWindow = new google.maps.InfoWindow;
+        cityPolygon.addListener('click', showArrays);
+
+        /** @this {google.maps.Polygon} */
+        function showArrays(event) {
+            // Since this polygon has only one path, we can call getPath() to return the
+            // MVCArray of LatLngs.
+            var vertices = this.getPath();
+
+            var contentString = '<b>Bermuda Triangle polygon</b><br>' +
+                    'Clicked location: <br>' + event.latLng.lat() + ',' + event.latLng.lng() +
+                    '<br>';
+
+            // Iterate over the vertices.
+            for (var i =0; i < vertices.getLength(); i++) {
+                var xy = vertices.getAt(i);
+                contentString += '<br>' + '{lat: ' + xy.lat() + ', lng: ' +
+                        xy.lng() + '},';
+            }
+
+            // End with the first coordinate to close the polygon
+            var xy = vertices.getAt(0);
+            contentString += '<br>' + '{lat: ' + xy.lat() + ', lng: ' +
+                    xy.lng() + '}';
+
+            // Replace the info window's content and position.
+            infoWindow.setContent(contentString);
+            infoWindow.setPosition(event.latLng);
+
+            infoWindow.open(map);
+        }
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+</script>
+</body>
+</html>

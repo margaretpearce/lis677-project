@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Naypyitaw - Myanmar</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 11,
+            center: {lat: 19.7469963, lng: 96.0533896},
+            mapTypeId: google.maps.MapTypeId.TERRAIN
+        });
+
+        // Define the LatLng coordinates for the polygon's path.
+        var polygonCoords = [
+            {lat: 19.762344146522732, lng: 96.0455311275391},
+            {lat: 19.713548217068027, lng: 96.0613234661621},
+            {lat: 19.71597239124523, lng: 96.0799488046631},
+            {lat: 19.728172667017688, lng: 96.08359664847421},
+            {lat: 19.729909749866277, lng: 96.11322971344612},
+            {lat: 19.734979387536136, lng: 96.12220975911566},
+            {lat: 19.744896, lng: 96.12809990000005},
+            {lat: 19.7696947168945, lng: 96.11299333920897},
+            {lat: 19.783829, lng: 96.08312390000003},
+            {lat: 19.77849843957265, lng: 96.06346920688475},
+            {lat: 19.762344146522732, lng: 96.0455311275391}
+        ];
+
+        // lng: 96.09, lat: 19.765381
+        var boundingBoxes = [
+            {north: 19.79029772900053, south: 19.700464270999465, east: 96.13772266650388, west: 96.04227733349613}
+        ];
+
+        // Draw the polygon version of the city
+        var cityPolygon = new google.maps.Polygon({
+            paths: polygonCoords,
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.5,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.2,
+            editable: true,
+            draggable: true,
+        });
+        cityPolygon.setMap(map);
+
+        // Draw bounding boxes surrounding each marker
+        for(i = 0; i < boundingBoxes.length; i++) {
+            var rectangle = new google.maps.Rectangle({
+                strokeColor: '#ffffff',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FFff00',
+                fillOpacity: 0.4,
+                map: map,
+                bounds: boundingBoxes[i]
+            });
+        }
+
+        // Respond to polygon click events
+        infoWindow = new google.maps.InfoWindow;
+        cityPolygon.addListener('click', showArrays);
+
+        /** @this {google.maps.Polygon} */
+        function showArrays(event) {
+            // Since this polygon has only one path, we can call getPath() to return the
+            // MVCArray of LatLngs.
+            var vertices = this.getPath();
+
+            var contentString = '<b>Bermuda Triangle polygon</b><br>' +
+                    'Clicked location: <br>' + event.latLng.lat() + ',' + event.latLng.lng() +
+                    '<br>';
+
+            // Iterate over the vertices.
+            for (var i =0; i < vertices.getLength(); i++) {
+                var xy = vertices.getAt(i);
+                contentString += '<br>' + '{lat: ' + xy.lat() + ', lng: ' +
+                        xy.lng() + '},';
+            }
+
+            // End with the first coordinate to close the polygon
+            var xy = vertices.getAt(0);
+            contentString += '<br>' + '{lat: ' + xy.lat() + ', lng: ' +
+                    xy.lng() + '}';
+
+            // Replace the info window's content and position.
+            infoWindow.setContent(contentString);
+            infoWindow.setPosition(event.latLng);
+
+            infoWindow.open(map);
+        }
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+</script>
+</body>
+</html>
